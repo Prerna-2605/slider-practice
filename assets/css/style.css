@@ -22,6 +22,10 @@ section {
     align-items: center;
 }
 
+.justify-space-btw {
+    justify-content: space-between;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -35,6 +39,8 @@ section {
     text-align: center;
     color: #0B132A;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content {
@@ -46,11 +52,11 @@ section {
     text-align: center;
     color: #4F5665;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
-    max-width: 400px;
-    height: 245px;
     border: 2px solid #DDDDDD;
     padding: 30px 30px 25px 30px;
     border-radius: 10px;
@@ -101,9 +107,68 @@ section {
 }
 
 .comment {
+    max-width: 340px;
     font-family: Rubik;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     color: #0B132A;
+}
+
+.slick-slide {
+    margin: 0 20px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.prev {
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #F53838;
+    transition: background-color 200ms linear;
+}
+
+.next {
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 2px solid #F53838;
+    transition: background-color 200ms linear;
+}
+
+.float-right {
+    float: right;
+}
+
+.prev svg path{
+    transition: fill 200ms linear;
+}
+
+.next svg path {
+    transition: fill 200ms linear;
+}
+
+.prev:hover {
+    background-color: #F53838;
+}
+
+.prev:hover svg path {
+    fill: #FFFFFF;
+}
+
+.next:hover {
+    background-color: #F53838;
+}
+
+.next:hover svg path {
+    fill: #FFFFFF;
 }
