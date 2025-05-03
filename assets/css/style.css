@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text-xl: 35px;
+    --text-lg: 18px;
+    --text-md: 16px;
+    --text-sm: 14px;
+}
+
 section {
     height: 100vh;
 }
@@ -34,6 +41,10 @@ section {
     display: flex !important;
 }
 
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
 .slick-slide {
     margin: 0 10px;
     padding-bottom: 30px;
@@ -45,27 +56,27 @@ section {
     display: flex;
 }
 
-.slick-current .card{
+.slick-current .card {
     border: solid 2px #F53838;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.slick-dots{
+.slick-dots {
     position: absolute;
     bottom: -75px;
     text-align: unset;
     margin-left: 30px;
 }
 
-.slick-dots li button{
+.slick-dots li button {
     display: none;
 }
 
-.slick-dots li button::before{
+.slick-dots li button::before {
     content: unset !important;
 }
 
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
     color: #F53838;
 }
 
@@ -88,7 +99,7 @@ section {
     max-width: 447.81px;
     font-family: Rubik;
     font-weight: 500;
-    font-size: 35px;
+    font-size: var(--text-xl);
     line-height: 50px;
     text-align: center;
     color: #0B132A;
@@ -101,7 +112,7 @@ section {
     max-width: 555px;
     font-family: Rubik;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--text-md);
     line-height: 30px;
     text-align: center;
     color: #4F5665;
@@ -124,7 +135,7 @@ section {
 .name {
     font-family: Rubik;
     font-weight: 500;
-    font-size: 18px;
+    font-size: var(--text-lg);
     line-height: 30px;
     color: #0B132A;
     white-space: nowrap;
@@ -133,7 +144,7 @@ section {
 .location {
     font-family: Rubik;
     font-weight: 400;
-    font-size: 14px;
+    font-size: var(--text-sm);
     line-height: 30px;
     color: #4F5665;
 }
@@ -141,7 +152,7 @@ section {
 .rating {
     font-family: Rubik;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--text-md);
     line-height: 30px;
     color: #0B132A;
     margin-right: 10px;
@@ -159,13 +170,9 @@ section {
     max-width: 340px;
     font-family: Rubik;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--text-md);
     line-height: 30px;
     color: #0B132A;
-}
-
-.slick-slide {
-    margin: 0 20px;
 }
 
 .mr-30 {
@@ -198,7 +205,7 @@ section {
     float: right;
 }
 
-.prev svg path{
+.prev svg path {
     transition: fill 200ms linear;
 }
 
@@ -220,4 +227,141 @@ section {
 
 .next:hover svg path {
     fill: #FFFFFF;
+}
+
+@media (max-width:769px) {
+    :root {
+        --text-xl: 30px;
+        --text-lg: 15px;
+        --text-md: 13px;
+        --text-sm: 11px;
+    }
+
+    .prev {
+        width: 50px;
+        height: 50px;
+    }
+
+    .next {
+        width: 50px;
+        height: 50px;
+    }
+
+    .slick-dots li {
+        width: 10px;
+        height: 10px;
+        bottom: 45px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .slick-dots li.slick-active {
+        width: 35px;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:426px) {
+    :root {
+        --text-xl: 25px;
+        --text-lg: 12px;
+        --text-md: 10px;
+        --text-sm: 8px;
+    }
+
+    .prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev svg {
+        width: 15px;
+        height: 14px;
+    }
+
+    .next svg {
+        width: 15px;
+        height: 14px;
+    }
+
+    .slick-dots li {
+        width: 7px;
+        height: 7px;
+        bottom: 45px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .slick-dots li.slick-active {
+        width: 25px;
+    }
+
+    .name {
+        height: 20px;
+    }
+}
+
+@media (max-width:321px) {
+    :root {
+        --text-xl: 22px;
+        --text-lg: 9px;
+        --text-md: 7px;
+        --text-sm: 5px;
+    }
+
+    .prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev svg {
+        width: 15px;
+        height: 14px;
+    }
+
+    .next svg {
+        width: 15px;
+        height: 14px;
+    }
+
+    .slick-dots li {
+        width: 7px;
+        height: 7px;
+        bottom: 45px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .slick-dots li.slick-active {
+        width: 25px;
+    }
+
+    .name {
+        height: 15px;
+    }
+}
+
+@media (max-width:371px) {
+    .buttons {
+        display: none;
+    }
+
+    .slick-dots {
+        position: absolute;
+        text-align: start;
+        margin-left: 55px;
+    }
 }
