@@ -309,7 +309,7 @@ section {
     }
 }
 
-@media (max-width:321px) {
+@media (max-width:322px) {
     :root {
         --text-xl: 22px;
         --text-lg: 9px;
